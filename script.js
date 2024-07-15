@@ -1,44 +1,36 @@
-document.addEventListener('DOMContentLoaded', (event) => {
+// document.addEventListener("DOMContentLoaded", () => {
+//   const div = document.querySelector('.earningcounter');
+//   const incrementValue = 1000;
+//   const incrementInterval = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
 
-  const confetti = document.querySelector(".confetti");
-  
-  const claim_btn = document.querySelector(".claimbtn");
-  const show_countdown = document.querySelector(".countdown");
-let earning_counter = document.querySelector(".earningcounter");
-let earning = parseInt(localStorage.getItem('earning')) || 0;
-earning_counter.textContent = earning;
+//   function getCurrentValue() {
+//     return parseInt(localStorage.getItem('incrementValue')) || 0;
+//   }
 
+//   function setCurrentValue(value) {
+//     localStorage.setItem('incrementValue', value);
+//     div.textContent = value;
+//   }
 
-   let intervalId;
-  
-   claim_btn.addEventListener("click", (event)=>{
-    claim_btn.style.display = "none";
-    confetti.style.display = "none";
-    show_countdown.style.display = "block";
-    
-    earning_counter.textContent = earning;
-    localStorage.setItem("earning", earning)
+//   function checkAndUpdateValue() {
+//     const lastIncrementTime = parseInt(localStorage.getItem('lastIncrementTime')) || 0;
+//     const currentTime = Date.now();
 
-    //this lines controls the rising text...
+//     if (currentTime - lastIncrementTime >= incrementInterval) {
+//       const newValue = getCurrentValue() + incrementValue;
+//       setCurrentValue(newValue);
+//       localStorage.setItem('lastIncrementTime', currentTime);
+//     } else {
+//       setCurrentValue(getCurrentValue());
+//     }
+//   }
 
-       
-      const increment = document.createElement('div');
-      increment.classList.add('increment');
-      increment.textContent = `+${counter}`;
-      
-      increment.style.left = `${event.clientX - this.offsetLeft}px`;
-      increment.style.top = `${event.clientY - this.offsetTop}px`;
-      this.appendChild(increment);
-  
-      setTimeout(() => {
-          increment.remove();
-      }, 1000);
-  
-  
+//   checkAndUpdateValue();
 
+//   setInterval(() => {
+//     checkAndUpdateValue();
 
-  });
-
-});
+//   }, 1000); // Check every second
+// });
 
 
