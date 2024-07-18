@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     const div = document.querySelector('.earningcounter');
-    const incrementValue = 100;
+    const incrementValue = 30;
     const incrementInterval = 1 * 60 * 60 * 1000; // 1 hour in milliseconds
   
     function getCurrentValue() {
