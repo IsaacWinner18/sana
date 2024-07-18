@@ -1,34 +1,34 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    const div = document.querySelector('.earningcounter');
-    const incrementValue = 30;
-    const incrementInterval = 1 * 60 * 60 * 1000; // 1 hour in milliseconds
+// document.addEventListener('DOMContentLoaded', (event) => {
+//     const div = document.querySelector('.earningcounter');
+//     const incrementValue = 1;
+//     const incrementInterval = 1 * 60 * 60 * 1000; // 1 hour in milliseconds
   
-    function getCurrentValue() {
-      return parseInt(localStorage.getItem('incrementValue')) || 0;
-    }
+//     function getCurrentValue() {
+//       return parseInt(localStorage.getItem('incrementValue')) || 0;
+//     }
   
-    function setCurrentValue(value) {
-      localStorage.setItem('incrementValue', value);
-      div.textContent = value;
-    }
+//     function setCurrentValue(value) {
+//       localStorage.setItem('incrementValue', value);
+//       div.textContent = value;
+//     }
   
-    function checkAndUpdateValue() {
-      const lastIncrementTime = parseInt(localStorage.getItem('lastIncrementTime')) || 0;
-      const currentTime = Date.now();
+//     function checkAndUpdateValue() {
+//       const lastIncrementTime = parseInt(localStorage.getItem('lastIncrementTime')) || 0;
+//       const currentTime = Date.now();
   
-      if (currentTime - lastIncrementTime >= incrementInterval) {
-        const newValue = getCurrentValue() + incrementValue;
-        setCurrentValue(newValue);
-        localStorage.setItem('lastIncrementTime', currentTime);
-      } else {
-        setCurrentValue(getCurrentValue());
-      }
-    }
+//       if (currentTime - lastIncrementTime >= incrementInterval) {
+//         const newValue = getCurrentValue() + incrementValue;
+//         setCurrentValue(newValue);
+//         localStorage.setItem('lastIncrementTime', currentTime);
+//       } else {
+//         setCurrentValue(getCurrentValue());
+//       }
+//     }
   
-    checkAndUpdateValue();
+//     checkAndUpdateValue();
   
-    setInterval(() => {
-      checkAndUpdateValue();
-    }, 1000); // Check every second
-  });
+//     setInterval(() => {
+//       checkAndUpdateValue();
+//     }, 1000); // Check every second
+//   });
   
