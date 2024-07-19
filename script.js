@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   
     // Set interval to update balance every hour (3600000 milliseconds)
-    setInterval(updateBalance, 3600000);
+    setInterval(updateBalance, 360);
   
     // Initialize balance on page load
     initializeBalance();
