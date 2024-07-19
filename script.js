@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function initializeBalance() {
       let savedBalance = parseFloat(localStorage.getItem("currentBalance")) || 26750;
       balanceDisplay.textContent = savedBalance;
-localStorage.clear()
+// localStorage.clear()
     }
   
     // Set interval to update balance every hour (3600000 milliseconds)
