@@ -4,19 +4,17 @@ document.addEventListener("DOMContentLoaded", function() {
   
     // Function to update balance and store in local storage
     function updateBalance() {
-      let currentBalance = parseFloat(localStorage.getItem("currentBalance")) || 26353;
+      let currentBalance = parseFloat(localStorage.getItem("currentBalance")) || 26400;
       currentBalance += ratePerHour;
       balanceDisplay.textContent = currentBalance;
-    //   localStorage.setItem("currentBalance", currentBalance);
-    localStorage.clear();
+      localStorage.setItem("currentBalance", currentBalance);
 
     }
   
     // Initialize balance display from local storage
     function initializeBalance() {
-      let savedBalance = parseFloat(localStorage.getItem("currentBalance")) || 26353;
+      let savedBalance = parseFloat(localStorage.getItem("currentBalance")) || 26400;
       balanceDisplay.textContent = savedBalance;
-      localStorage.clear();
 
     }
   
