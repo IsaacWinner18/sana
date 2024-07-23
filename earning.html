@@ -123,6 +123,24 @@
       </button>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let currentBalance = parseFloat(localStorage.getItem('currentBalance')) || 32300;
+    
+        function updateBalance() {
+          currentBalance += 50;
+          document.querySelector('.earningcounter').innerText = currentBalance.toFixed(2);
+          localStorage.setItem('currentBalance', currentBalance);
+        }
+    
+        function formatBalanceDisplay() {
+          document.querySelector('.earningcounter').innerText = currentBalance.toFixed(2);
+          localStorage.clear();
+        }
+    
+        formatBalanceDisplay();
+        setInterval(updateBalance, 3600000);
+      });
+    </script>
   </body>
 </html>
