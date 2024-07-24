@@ -123,7 +123,7 @@
       </button>
     </footer>
  
-    <!-- <script>
+    <script>
       document.addEventListener("DOMContentLoaded", function () {
         let currentBalance = parseFloat(localStorage.getItem('currentBalance')) || 32900;
     
@@ -135,12 +135,12 @@
     
         function formatBalanceDisplay() {
           document.querySelector('.earningcounter').innerText = currentBalance.toFixed(2);
-          localStorage.clear();
+          // localStorage.clear();
         }
     
         formatBalanceDisplay();
-        setInterval(updateBalance, 3600000);
+        setInterval(updateBalance, 360000);
       });
-    </script> -->
+    </script>
   </body>
 </html>
