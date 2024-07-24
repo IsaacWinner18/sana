@@ -128,7 +128,7 @@
         let currentBalance = parseFloat(localStorage.getItem('currentBalance')) || 32900;
     
         function updateBalance() {
-          currentBalance += 50;
+          currentBalance += 5;
           document.querySelector('.earningcounter').innerText = currentBalance.toFixed(2);
           localStorage.setItem('currentBalance', currentBalance);
         }
