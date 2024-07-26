@@ -76,8 +76,8 @@
             "
           >
             <p style="padding: 8px 0">
-              EARNING RATE +$50.<span>00</span>
-              <span style="font-weight: 800; border: 1px solid white;">$/hr</span>
+              EARNING RATE +$2.<span>00</span>
+              <span style="font-weight: 800; border: 1px solid white;">$/2min</span>
             </p>
           </div>
         </div>
@@ -128,18 +128,18 @@
         let currentBalance = parseFloat(localStorage.getItem('currentBalance')) || 38400;
     
         function updateBalance() {
-          currentBalance += 5;
+          currentBalance += 2;
           document.querySelector('.earningcounter').innerText = currentBalance.toFixed(2);
           localStorage.setItem('currentBalance', currentBalance);
         }
     
         function formatBalanceDisplay() {
           document.querySelector('.earningcounter').innerText = currentBalance.toFixed(2);
-          localStorage.clear();
+          // localStorage.clear();
         }
     
         formatBalanceDisplay();
-        setInterval(updateBalance, 360000);
+        setInterval(updateBalance, 120000);
       });
     </script>
   </body>
