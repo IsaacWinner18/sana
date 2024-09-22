@@ -51,8 +51,8 @@ body {
 }
 
 .claimbtn {
-  /* background-color: rgb(187, 4, 254);
-  border: none; */
+  background-color: rgb(187, 4, 254);
+  border: none;
   padding: 10px 28px;
   color: white;
   border-radius: 5px;
